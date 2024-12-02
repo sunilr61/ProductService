@@ -4,6 +4,9 @@ import com.productservice.productservice.dtos.FakeStoreProductDto;
 import com.productservice.productservice.models.Product;
 import com.productservice.productservice.services.FakeStoreProductService;
 import com.productservice.productservice.services.ProductService;
+import com.productservice.productservice.services.SelfProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -12,7 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-    ProductService productService;
+    private ProductService productService;
+    @Autowired
     public ProductController(ProductService productService){
         this.productService=productService;
     }

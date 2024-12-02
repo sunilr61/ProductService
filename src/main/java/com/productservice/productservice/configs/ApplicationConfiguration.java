@@ -1,5 +1,6 @@
 package com.productservice.productservice.configs;
 
+import com.productservice.productservice.repositories.ProductRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -9,4 +10,5 @@ public class ApplicationConfiguration {
     public RestTemplate createRestTemplate(){
         return new RestTemplate();
     }
+
 }

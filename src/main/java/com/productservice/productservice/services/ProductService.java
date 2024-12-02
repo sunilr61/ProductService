@@ -1,5 +1,6 @@
 package com.productservice.productservice.services;
 
+import com.productservice.productservice.exceptions.ProductNotFoundException;
 import com.productservice.productservice.models.Product;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
